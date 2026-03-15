@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Samurai Advanced Bot"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="إعدادات البوت:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اسم الفرع (اتركه فارغاً لأي فرع):"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etBranchName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="مثال: الرياض، جدة، أو اسم فرع محدد"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="نوع الحجز:"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/rgShiftType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/rbFullShift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="شفت كامل"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbPartialShift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="شفت جزئي"
+                android:layout_marginStart="20dp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="حفظ الإعدادات"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnGrantPermission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تفعيل خدمة الوصول (Accessibility)"
+            android:backgroundTint="#4CAF50" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="طريقة العمل:\n1. احفظ الإعدادات.\n2. فعل خدمة الوصول.\n3. افتح تطبيق ساموراي واذهب لصفحة الفروع أو الشفتات."
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:textColor="#666" />
+
+    </LinearLayout>
+</ScrollView>
