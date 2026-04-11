@@ -33,16 +33,6 @@ public class SamuraiAccessibilityService extends AccessibilityService {
     private static final String[] PARTIAL_SHIFT_TEXTS = {"partial shift", "\u0634\u0641\u062A \u062C\u0632\u0626\u064A", "\u062C\u0632\u0626\u064A"};
     private static final String[] CONFIRM_TEXTS = {"book", "\u062D\u062C\u0632", "yes", "\u0646\u0639\u0645", "confirm", "\u062A\u0623\u0643\u064A\u062F"};
 
-    // Pre-built lookup set of all confirmation texts for O(1) membership testing during tree traversal
-    private static final Set<String> ALL_CONFIRMATION_TEXTS;
-    static {
-        Set<String> texts = new HashSet<>();
-        for (String s : FULL_SHIFT_TEXTS) texts.add(s);
-        for (String s : PARTIAL_SHIFT_TEXTS) texts.add(s);
-        for (String s : CONFIRM_TEXTS) texts.add(s);
-        ALL_CONFIRMATION_TEXTS = Collections.unmodifiableSet(texts);
-    }
-
     private boolean isRunning = false;
     private final Handler handler = new Handler(Looper.getMainLooper());
 
